@@ -3,6 +3,7 @@ import postgresql from './postgresql';
 import sqlserver from './sqlserver';
 import sqlite from './sqlite';
 import cassandra from './cassandra';
+import ibmdb from './ibmdb';
 
 
 /**
@@ -65,6 +66,11 @@ export const CLIENTS = [
       'cancelQuery',
     ],
   },
+  {
+    key: 'ibmdb',
+    name: 'IBM DB2/dashDB',
+    defaultPort: 1433,
+  },
 ];
 
 
@@ -74,4 +80,5 @@ export default {
   sqlserver,
   sqlite,
   cassandra,
+  ibmdb,
 };
